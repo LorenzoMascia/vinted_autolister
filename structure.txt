@@ -1,0 +1,58 @@
+VintedAutoLister/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── requirements.txt
+│
+├── docs/                   # Detailed documentation
+│   ├── ARCHITECTURE.md
+│   ├── SETUP.md
+│   ├── USAGE.md
+│   ├── CONTRIBUTING.md
+│   ├── CHANGELOG.md
+│   └── API_REFERENCE.md
+│
+├── backend/                # Python Logic Backend
+│   ├── app.py              # Flask/FastAPI app entry point.
+│   ├── api/                # Backend API routing
+│   │   ├── vision.py       # GPT-4 Vision Analysis Endpoint
+│   │   ├── scraping.py     # Endpoint scraping prezzi
+│   │   └── description.py  # Endpoint generation descriptions GPT-4
+│   │
+│   ├── core/               # Core logic and orchestrationEndpoint generation descriptions GPT-4
+│   │   ├── vision_api.py
+│   │   ├── price_scraper.py
+│   │   ├── price_analyzer.py
+│   │   ├── description_generator.py
+│   │   └── card_builder.py
+│   │
+│   ├── models/             # Data models (e.g., Pydantic)
+│   │   └── product.py
+│   │
+│   ├── utils/              # General utility functions
+│   │   ├── helpers.py
+│   │   └── validators.py
+│   │
+│   └── tests/              # Unit testing and integration
+│       ├── test_api.py
+│       └── test_core.py
+│
+├── frontend/               # Interactive UI (e.g. Streamlit, React)
+│   ├── app.py              # Streamlit app entry point
+│   └── components/
+│       ├── uploader.py
+│       ├── product_preview.py
+│       └── dashboard.py
+│
+├── scripts/                # Miscellaneous scripts (setup, maintenance, migrations)
+│   ├── setup_db.py
+│   └── cleanup.py
+│
+├── data/                   # Temporary files/saved data (if needed)
+│   ├── images/
+│   └── temp/
+│
+└── deployment/             # Configurations for deployment
+    ├── Dockerfile
+    ├── docker-compose.yml
+    └── deploy_notes.md
