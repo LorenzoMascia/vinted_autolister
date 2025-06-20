@@ -1,0 +1,17 @@
+# ============================================================================
+# FILE: docker/docker-compose.yml
+# Docker compose
+# ============================================================================
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - .:/app
+    command: poetry run streamlit run src/main.py --server.port=8501 --server.address=0.0.0.0

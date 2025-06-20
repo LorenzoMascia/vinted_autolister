@@ -1,0 +1,38 @@
+# ============================================================================
+# FILE: pyproject.toml
+# Poetry config
+# ============================================================================
+
+[tool.poetry]
+name = "vinted-autolister"
+version = "0.1.0"
+description = "Tool per generare annunci Vinted automaticamente"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+streamlit = "^1.22.0"
+Pillow = "^9.3.0"
+requests = "^2.28.1"
+openai = "^0.27.0"
+aiohttp = "^3.8.3"
+beautifulsoup4 = "^4.11.1"
+fake-useragent = "^1.1.3"
+pydantic = "^1.10.2"
+click = "^8.1.3"
+fastapi = "^0.85.0"
+uvicorn = "^0.19.0"
+python-multipart = "^0.0.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+pytest-asyncio = "^0.20.3"
+pytest-cov = "^4.0.0"
+mypy = "^0.991"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

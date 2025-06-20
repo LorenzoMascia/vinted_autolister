@@ -1,58 +1,63 @@
-VintedAutoLister/
-├── README.md
-├── LICENSE
+vinted-autolister/
+├── 📁 src/
+│   ├── 📁 core/
+│   │   ├── __init__.py
+│   │   ├── autolister.py          # Main orchestrator
+│   │   ├── vision_analyzer.py     # Image analysis
+│   │   ├── price_scraper.py       # Vinted scraper
+│   │   ├── price_analyzer.py      # Price computation
+│   │   └── content_generator.py   # AI text generation
+│   ├── 📁 models/
+│   │   ├── __init__.py
+│   │   ├── product.py             # Product data models
+│   │   ├── listing.py             # Listing data models
+│   │   └── price.py               # Price data models
+│   ├── 📁 services/
+│   │   ├── __init__.py
+│   │   ├── openai_service.py      # OpenAI API wrapper
+│   │   ├── scraping_service.py    # Web scraping utilities
+│   │   └── cache_service.py       # Caching layer
+│   ├── 📁 ui/
+│   │   ├── __init__.py
+│   │   ├── components/
+│   │   │   ├── upload.py          # Upload component
+│   │   │   ├── preview.py         # Preview component
+│   │   │   └── export.py          # Export component
+│   │   └── pages/
+│   │       ├── main.py            # Main page
+│   │       ├── batch.py           # Batch processing
+│   │       └── analytics.py      # Analytics dashboard
+│   ├── 📁 utils/
+│   │   ├── __init__.py
+│   │   ├── image_utils.py         # Image processing
+│   │   ├── text_utils.py          # Text processing
+│   │   └── validation.py         # Input validation
+│   ├── 📁 api/
+│   │   ├── __init__.py
+│   │   ├── routes.py              # FastAPI routes
+│   │   └── middleware.py          # API middleware
+│   ├── cli.py                     # CLI interface
+│   └── main.py                    # Streamlit entry point
+├── 📁 tests/
+│   ├── 📁 unit/
+│   ├── 📁 integration/
+│   └── 📁 fixtures/
+├── 📁 config/
+│   ├── settings.py                # Configuration
+│   └── logging.py                 # Logging setup
+├── 📁 docs/
+│   ├── api.md                     # API documentation
+│   ├── deployment.md              # Deploy guide
+│   └── examples.md                # Usage examples
+├── 📁 docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── 📁 scripts/
+│   ├── setup.sh                   # Setup script
+│   └── deploy.sh                  # Deploy script
+├── requirements.txt               # Dependencies
+├── pyproject.toml                 # Poetry config
+├── .env.example                   # Environment template
 ├── .gitignore
-├── requirements.txt
-│
-├── docs/                   # Detailed documentation
-│   ├── ARCHITECTURE.md
-│   ├── SETUP.md
-│   ├── USAGE.md
-│   ├── CONTRIBUTING.md
-│   ├── CHANGELOG.md
-│   └── API_REFERENCE.md
-│
-├── backend/                # Python Logic Backend
-│   ├── app.py              # Flask/FastAPI app entry point.
-│   ├── api/                # Backend API routing
-│   │   ├── vision.py       # GPT-4 Vision Analysis Endpoint
-│   │   ├── scraping.py     # Endpoint scraping prezzi
-│   │   └── description.py  # Endpoint generation descriptions GPT-4
-│   │
-│   ├── core/               # Core logic and orchestrationEndpoint generation descriptions GPT-4
-│   │   ├── vision_api.py
-│   │   ├── price_scraper.py
-│   │   ├── price_analyzer.py
-│   │   ├── description_generator.py
-│   │   └── card_builder.py
-│   │
-│   ├── models/             # Data models (e.g., Pydantic)
-│   │   └── product.py
-│   │
-│   ├── utils/              # General utility functions
-│   │   ├── helpers.py
-│   │   └── validators.py
-│   │
-│   └── tests/              # Unit testing and integration
-│       ├── test_api.py
-│       └── test_core.py
-│
-├── frontend/               # Interactive UI (e.g. Streamlit, React)
-│   ├── app.py              # Streamlit app entry point
-│   └── components/
-│       ├── uploader.py
-│       ├── product_preview.py
-│       └── dashboard.py
-│
-├── scripts/                # Miscellaneous scripts (setup, maintenance, migrations)
-│   ├── setup_db.py
-│   └── cleanup.py
-│
-├── data/                   # Temporary files/saved data (if needed)
-│   ├── images/
-│   └── temp/
-│
-└── deployment/             # Configurations for deployment
-    ├── Dockerfile
-    ├── docker-compose.yml
-    └── deploy_notes.md
+├── README.md
+└── LICENSE
