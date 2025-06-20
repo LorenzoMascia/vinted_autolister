@@ -8,8 +8,8 @@ import aiohttp
 from typing import Optional, Dict, Any
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
-from ..utils.text_utils import TextNormalizer
-from ..services.cache_service import CacheService
+from src.utils.text_utils import TextNormalizer
+from src.services.cache_service import CacheService
 
 class ScrapingService:
     """Service per operazioni di scraping generiche"""

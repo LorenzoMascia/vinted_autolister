@@ -3,7 +3,7 @@
 # Entry point Streamlit
 # ============================================================================
 
-from ui.pages.main import MainPage
+from src.ui.pages.main import MainPage
 
 def main():
     """Entry point applicazione Streamlit"""

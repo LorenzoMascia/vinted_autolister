@@ -7,7 +7,7 @@ import click
 import asyncio
 from typing import Optional
 from pathlib import Path
-from .core.autolister import VintedAutoLister
+from src.core.autolister import VintedAutoLister
 
 @click.group()
 def cli():

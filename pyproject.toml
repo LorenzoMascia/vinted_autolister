@@ -6,46 +6,72 @@
 [tool.poetry]
 name = "vinted-autolister"
 version = "0.1.0"
-description = "Tool per generare annunci Vinted automaticamente"
-authors = ["Your Name <your.email@example.com>"]
+description = "Applicazione per generare automaticamente annunci Vinted da immagini"
+authors = ["Il Tuo Nome <tua@email.com>"]
 license = "MIT"
+readme = "README.md"
 
+# Includi i moduli reali (quelli dentro src/)
 packages = [
-    { include = "src" }
+    { include = "ui", from = "src" },
+    { include = "core", from = "src" },
+    { include = "utils", from = "src" }
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-streamlit = "^1.22.0"
-Pillow = "^9.3.0"
-requests = "^2.28.1"
-openai = "^0.27.0"
-aiohttp = "^3.8.3"
-beautifulsoup4 = "^4.11.1"
+python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+streamlit = "^1.28.0"
+openai = "^0.28.0"
+pillow = "^10.0.0"
+pydantic = "^2.0.0"
+aiohttp = "^3.8.0"
+beautifulsoup4 = "^4.12.0"
+python-dotenv = "^1.0.0"
 fake-useragent = "^1.1.3"
-pydantic = "^1.10.2"
-click = "^8.1.3"
-fastapi = "^0.85.0"
-uvicorn = "^0.19.0"
-python-multipart = "^0.0.5"
-
-[tool.poetry.dev-dependencies]
-pytest = "^7.2.0"
-pytest-asyncio = "^0.20.3"
-pytest-cov = "^4.0.0"
-mypy = "^0.991"
-black = "^22.12.0"
-flake8 = "^6.0.0"
+httpx = "^0.25.0"
+uvicorn = "^0.23.0"
+fastapi = "^0.103.0"
+python-multipart = "^0.0.6"
+loguru = "^0.7.0"
+pydantic-settings = "^2.9.1"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
-pytest-asyncio = "^0.20.3"
-pytest-cov = "^4.0.0"
-mypy = "^0.991"
-black = "^22.12.0"
-flake8 = "^6.0.0"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.23.0"
+pytest-cov = "^4.1.0"
+black = "^23.7.0"
+mypy = "^1.5.0"
+ruff = "^0.0.286"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+python_files = "test_*.py"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "B", "C", "N", "RUF"]
+ignore = ["E501"]
+target-version = "py39"

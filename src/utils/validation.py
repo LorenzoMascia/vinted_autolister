@@ -5,7 +5,7 @@
 
 from typing import Optional, Tuple
 from pathlib import Path
-from ..models.product import Condition
+from src.models.product import Condition
 
 class InputValidator:
     """Validazione input utente e file"""
