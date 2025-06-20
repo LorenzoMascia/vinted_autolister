@@ -4,7 +4,7 @@
 # ============================================================================
 
 from dataclasses import dataclass
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime
 
 @dataclass
@@ -16,9 +16,9 @@ class VintedListing:
     url: str
     brand: str
     size: str
-    date_posted: Optional[datetime] = None
+    date_posted: Optional[datetime] = None  # Ora Optional è importato
     sold: bool = False
-
+    
 @dataclass
 class PriceDistribution:
     """Distribuzione prezzi per un tipo di prodotto"""

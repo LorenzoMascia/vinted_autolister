@@ -4,8 +4,9 @@
 # ============================================================================
 
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import List, Optional, ForwardRef
 from .product import ProductData, Condition
+from .price import PriceAnalysis  
 
 @dataclass
 class ListingData:
@@ -30,6 +31,7 @@ class ListingResult:
     """Risultato completo del processo"""
     listing: ListingData
     product_data: ProductData
-    market_analysis: 'PriceAnalysis'
+    market_analysis: PriceAnalysis  
     generation_time: float
     confidence_score: float
+

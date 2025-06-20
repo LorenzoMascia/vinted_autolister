@@ -5,7 +5,7 @@
 
 import streamlit as st
 import json
-from ..models.listing import ListingData
+from src.models.listing import ListingData
 
 class ExportComponent:
     """Componente per esportazione risultati"""
