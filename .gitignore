@@ -1,0 +1,77 @@
+# ============ Python / Poetry ============
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+.env
+.venv/
+poetry.lock
+.cache/
+
+# ============ VSCode ============
+
+.vscode/
+.history/
+
+# ============ Logs / Cache ============
+
+logs/
+cache/
+*.log
+*.tmp
+
+# ============ Streamlit ============
+
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ============ Dataset / Output ============
+
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.csv
+*.json
+*.txt
+output/
+media/
+temp/
+*.pdf
+
+# ============ OS & Editor Artifacts ============
+
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.bak
+
+# ============ Docker ============
+
+**/__pycache__/
+docker/.env
+docker-compose.override.yml
+
+# ============ Test Artifacts ============
+
+htmlcov/
+coverage.*
+.tox/
+.pytest_cache/
+test-results/
+*.coverage
+
+# ============ Jupyter (se usato) ============
+
+.ipynb_checkpoints/
+
+# ============ API Keys / Secrets ============
+
+.env
+*.env
+secrets.json
