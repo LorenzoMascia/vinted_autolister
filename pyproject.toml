@@ -10,6 +10,10 @@ description = "Tool per generare annunci Vinted automaticamente"
 authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
 
+packages = [
+    { include = "src" }
+]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 streamlit = "^1.22.0"
@@ -33,6 +37,15 @@ mypy = "^0.991"
 black = "^22.12.0"
 flake8 = "^6.0.0"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+pytest-asyncio = "^0.20.3"
+pytest-cov = "^4.0.0"
+mypy = "^0.991"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+

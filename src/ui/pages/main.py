@@ -3,6 +3,7 @@
 # Pagina principale Streamlit
 # ============================================================================
 
+
 import streamlit as st
 from typing import Optional, Dict, Any
 from src.core.autolister import VintedAutoLister
