@@ -5,7 +5,7 @@
 
 import streamlit as st
 from typing import Dict, Any
-from src.models.listing import ListingData
+from models.listing import ListingData
 
 class PreviewComponent:
     """Componente per preview dei risultati"""

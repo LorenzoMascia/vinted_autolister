@@ -6,11 +6,11 @@
 
 import streamlit as st
 from typing import Optional, Dict, Any
-from src.core.autolister import VintedAutoLister
-from src.models.listing import ListingResult
-from src.ui.components.upload import ImageUploadComponent
-from src.ui.components.preview import PreviewComponent
-from src.ui.components.export import ExportComponent
+from core.autolister import VintedAutoLister
+from models.listing import ListingResult
+from ui.components.upload import ImageUploadComponent
+from ui.components.preview import PreviewComponent
+from ui.components.export import ExportComponent
 
 class MainPage:
     """Pagina principale dell'applicazione"""

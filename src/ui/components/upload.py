@@ -7,8 +7,8 @@ import streamlit as st
 from PIL import Image
 import io
 from typing import List, Dict, Optional
-from src.utils.image_utils import ImageProcessor  
-from src.utils.validation import InputValidator  
+from utils.image_utils import ImageProcessor  
+from utils.validation import InputValidator  
 
 class ImageUploadComponent:
     """Componente per upload e preview immagine"""
